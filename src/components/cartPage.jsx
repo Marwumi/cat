@@ -46,22 +46,12 @@ const CartPage = () => {
           </div>
         </div>
 
-        <div className="col-lg-5 col-md-6 mb-4 mb-lg-0">
+        <div className="col-lg-3 col-md-6 mt-4 mb-lg-0">
           <p>
             <strong>{data.title}</strong>
           </p>
-
-          <button
-            type="button"
-            className="butt btn-sm me-1 mb-2"
-            onClick={() => handleRemoveItem(data.id)}
-          >
-            <i className="fas fa-close"></i>
-          </button><br/>
-          <p>#{data.price}</p>
-        </div>
-
-        <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          </div>
+                <div className="col-lg-3 col-md-6 mt-4 mb-lg-0">
           <div className="d-flex mb-4" style={{ maxWidth: "300px" }}>
             <button
               className="butt px-3 me-2"
@@ -77,7 +67,7 @@ const CartPage = () => {
             </div>
 
             <button
-              className="butt px-3 ms-2"
+              className="butt px-3 ms-2 "
               onClick={() => handleIncreaseItemQuantity(data.id)}
             >
               <i className="fas fa-plus"></i>
@@ -88,13 +78,22 @@ const CartPage = () => {
             <strong>#{data.quantity * data.price}</strong>
           </p>
         </div>
+        <div className="col-lg-3 col-md-6 mt-4 mb-lg-0">
+        <button
+            type="button"
+            className="cancelll px-3 me-2"
+            onClick={() => handleRemoveItem(data.id)}
+          >
+            <i className="fas fa-close" style={{color: "red"}}></i>
+          </button><br/>
+        </div>
         <hr className="my-4" />
       </div>
     ));
   };
 
   return (
-    <div>
+    <div className="cartPage">
       <section className="h-100 gradient-custom">
         <div className="container py-5">
           <div className="row d-flex justify-content-center my-4">
@@ -133,7 +132,7 @@ const CartPage = () => {
                     type="button"
                     className=" btn-lg btn-block checkout"
                     
-                  ><Link to="/" style={{color: 'gold', fontSize: '1.3rem'}}>
+                  ><Link to="/checkout" style={{color: 'gold', fontSize: '1.3rem'}}>
                     Go to checkout
                     </Link>  </button>
                 </div>

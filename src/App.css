@@ -1,4 +1,6 @@
 body {
+
+
   background: linear-gradient(to right,
       rgb(7, 7, 7),
       rgb(252, 184, 37));
@@ -21,18 +23,29 @@ body {
 .checkout {
   background-color: black;
   color: gold;
-  
+
 }
 
 .butt {
   background-color: black;
   color: gold;
-  border-radius: 3px;
+  border-radius: 8px;
 }
+
+.butt:hover {
+  background-color: rgb(156, 155, 154);
+}
+
 
 @media screen and (max-width: 450px) {
   .food--home {
     font-size: 40px;
+  }
+  .orderPage{
+    padding-top: 1.5rem;
+  }
+  .cartPage{
+    padding-top: 1.5rem;
   }
 }
 
@@ -85,4 +98,33 @@ body {
 
 .chkout:hover {
   font-size: 1.1rem;
+}
+
+.success {
+  max-width: 300px;
+  margin: 0 auto;
+  padding-top: 4rem;
+  align-items: center;
+  text-align: center;
+  color: wheat;
+}
+
+.checkout_page {
+  padding: 4rem 1rem;
+}
+
+.cancelll{
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  width: 0.2rem;
+  height: 1.5rem;
+  margin-left: 18px;
+
+}
+.cancelll:hover{
+  background-color: rgb(156, 155, 154);
+}
+input{
+  border-radius: 6px;
 }

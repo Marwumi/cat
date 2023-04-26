@@ -7,7 +7,7 @@ export default function App() {
   const dispatch = useDispatch();
 
   return (
-    <div className="m-2 ">
+    <div className="m-2 orderPage">
       <div className="container"  style={{paddingTop: '70px'}}>
         <div className="row">
           {items.map((item) => (
