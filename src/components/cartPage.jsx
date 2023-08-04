@@ -8,6 +8,7 @@ import {
   decreaseItemQuantity,
   increaseItemQuantity,
 } from "../features/cartSlice";
+import Navbar from "./Navbar";
 
 const CartPage = () => {
   const { cart, totalQuantity, totalPrice } = useSelector(
@@ -75,7 +76,7 @@ const CartPage = () => {
           </div>
 
           <p className="text-start text-md-center">
-            <strong>#{data.quantity * data.price}</strong>
+            <strong>{'₦ '}{data.quantity * data.price}</strong>
           </p>
         </div>
         <div className="col-lg-3 col-md-6 mt-4 mb-lg-0">
@@ -94,6 +95,7 @@ const CartPage = () => {
 
   return (
     <div className="cartPage">
+         <Navbar />
       <section className="h-100 gradient-custom">
         <div className="container py-5">
           <div className="row d-flex justify-content-center my-4">
@@ -123,7 +125,7 @@ const CartPage = () => {
                         <strong>Total amount</strong>
                       </div>
                       <span>
-                        <strong>#{totalPrice}</strong>
+                        <strong>{'₦ '}{totalPrice}</strong>
                       </span>
                     </li>
                   </ul>

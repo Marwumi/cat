@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../features/cartSlice";
+import Navbar from "./Navbar";
 
 export default function App() {
   const items = useSelector((state) => state.allCart.items);
@@ -8,6 +9,7 @@ export default function App() {
 
   return (
     <div className="m-2 orderPage">
+         <Navbar />
       <div className="container"  style={{paddingTop: '70px'}}>
         <div className="row">
           {items.map((item) => (
@@ -16,7 +18,7 @@ export default function App() {
                 <img src={item.img} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">{item.title}</h5>
-                  <p className="card-text">#{item.price}</p>
+                  <p className="card-text">{'₦ '}{item.price}</p>
                   <button
                     onClick={() => dispatch(addToCart(item))}
                     className=" chkout"

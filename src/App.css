@@ -1,6 +1,4 @@
 body {
-
-
   background: linear-gradient(to right,
       rgb(7, 7, 7),
       rgb(252, 184, 37));
@@ -25,17 +23,34 @@ body {
   color: gold;
 
 }
+.payment--checkout {
+  background-color: black;
+  color: gold;
+  border-radius: 5px;
 
+}
+.back--checkout {
+  background-color: black;
+  color: gold;
+  padding: 2px 15px;
+  border-radius: 5px;
+
+}
 .butt {
   background-color: black;
   color: gold;
   border-radius: 8px;
+  padding: 2px 15px;
 }
 
 .butt:hover {
   background-color: rgb(156, 155, 154);
 }
-
+.btn--checkout{
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+}
 
 @media screen and (max-width: 450px) {
   .food--home {
@@ -47,8 +62,10 @@ body {
   .cartPage{
     padding-top: 1.5rem;
   }
+  .btn--checkout{
+    flex-direction: column;
 }
-
+}
 /* Product Card */
 .container {
   margin: 0 auto;
@@ -127,4 +144,11 @@ body {
 }
 input{
   border-radius: 6px;
+}
+.home--btn{
+  background-color: rgb(20, 19, 14);
+  color: black;
+  border-color: transparent;
+  border-radius: 5px;
+  padding: 5px;
 }
